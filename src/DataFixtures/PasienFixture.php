@@ -12,14 +12,14 @@ class PasienFixture extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        for($i = 1; $i <= 2; $i++){
-            $pasien = new Pasien ();
-            $pasien->setNoRm($i);
-            $pasien->setNama(sprintf('test%d',$i));
-            $pasien->setJenisKelamin('L');
-            $pasien->setTanggalLahir(\DateTime::createFromFormat('Y-m-d', "2018-09-09"));
-            $manager->persist($pasien);
-        }
+        // for($i = 1; $i <= 2; $i++){
+        //     $pasien = new Pasien ();
+        //     $pasien->setNoRm($i);
+        //     $pasien->setNama(sprintf('test%d',$i));
+        //     $pasien->setJenisKelamin('L');
+        //     $pasien->setTanggalLahir(\DateTime::createFromFormat('Y-m-d', "2018-09-09"));
+        //     $manager->persist($pasien);
+        // }
         $manager->flush();
     }
 }
