@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pasien{% endblock %}
+
+{% block body %}
+    <h1>Pasien</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ pasien.id }}</td>
+            </tr>
+            <tr>
+                <th>No_rm</th>
+                <td>{{ pasien.noRm }}</td>
+            </tr>
+            <tr>
+                <th>Nama</th>
+                <td>{{ pasien.nama }}</td>
+            </tr>
+            <tr>
+                <th>Jenis_kelamin</th>
+                <td>{{ pasien.jenisKelamin }}</td>
+            </tr>
+            <tr>
+                <th>Tanggal_lahir</th>
+                <td>{{ pasien.tanggalLahir ? pasien.tanggalLahir|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('pasien_index') }}">back to list</a>
+
+    <a href="{{ path('pasien_edit', {'id': pasien.id}) }}">edit</a>
+
+    {{ include('pasien/_delete_form.html.twig') }}
+{% endblock %}
